@@ -3,7 +3,7 @@ const path = require('path');
 
 (async () => {
   const files = await fsProm.readdir(path.join(__dirname, 'secret-folder'));
-  for await (const file of files) {
+  for (const file of files) {
     const pathToFile = path.join(__dirname, 'secret-folder', file);
     const fileInfo = await fsProm.stat(pathToFile);
     if (fileInfo.isFile()) {
