@@ -15,6 +15,6 @@ const path = require('path');
       }
     }
   } catch(error) {
-    console.log(error);
+    console.log(error.message);
   }
 })();
